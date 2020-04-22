@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Gapminder</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/gapminder.css" />
+  </head>
+  <body>
+    <!-- pretty ugly for now, but wait for CSS! -->
+    <header>
+      <img src="img/gapminder.png" alt="ENSAI logo" />
+      <h1>Tutorial #3 — Datavisualisation with JavaScript</h1>
+    </header>
+
+    <section id="sidepannel">
+      <div>
+        <h2>What is Gapminder?</h2>
+        <p>
+          <a href="https://www.gapminder.org">Gapminder</a> is an online-tool
+          developped by <em>The Gapminder fundation</em>. It provides an simple
+          interface enabling anyone to explore the evolution of countries
+          throughout the 20th century and to reproduce the optimistic and
+          entertaining narratives of <strong>Hans Rosling</strong>, funder of
+          the project. You may wish to watch Rosling's
+          <a href="https://www.ted.com/search?cat=videos&q=rosling"
+            >multiple TED talks</a
+          >.
+          <br />
+          In some regard, Rosling's Gapminder objectives are very similar to the
+          ones of Max Roser's
+          <a href="https://ourworldindata.org/">Our World in Data</a>.
+        </p>
+      </div>
+      <div>
+        <h2>Customize your graph</h2>
+        <div id="controls">
+          <span class="control-label">Y-axis</span>
+          <select id="y-axis-button" class="control-unit">
+            <option value="life_expectancy">Life expectancy</option>
+            <option value="co2_emissions">CO² Emissions</option>
+          </select>
+          <br />
+          <span class="control-label">Years</span>
+          <span class="control-unit">
+            <button id="play">▷</button>
+            <button id="pause">||</button
+            ><!-- Q1.9.-->
+            <span id="year-min" class="year-label">1950</span>
+            <input
+              id="year"
+              type="range"
+              min="1950"
+              max="2010"
+              value="1950"
+              step="1"
+            />
+            <span id="year-max" class="year-label">2010</span>
+          </span>
+          <br />
+          <button id="reinitialize">Reinitialize</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="content">
+      <svg id="my_graph">
+        <g id="y-axis"></g>
+        <g id="x-axis"></g>
+        <g id="countries"></g>
+      </svg>
+    </section>
+
+    <footer>
+      <img src="img/ensai.png" alt="Gapminder logo" />
+      <p>
+        This reproduction of Gapminder is part of a tutorial course at ENSAI,
+        2019-2020, by Arthur Katossky. CC-BY-SA.
+      </p>
+      <p>
+        <strong>Data source:</strong>
+        <a href="https://www.gapminder.org/data">Gapminder</a
+        ><!-- Q1.10.-->
+      </p>
+    </footer>
+
+    <script type="text/javascript" src="js/gapminder.js"></script>
+  </body>
+</html>

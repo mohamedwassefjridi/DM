@@ -1,0 +1,150 @@
+/* colors */
+
+body {
+  background-color: #f3f3f3;
+}
+header,
+footer {
+  background-color: white;
+}
+footer {
+  color: #666666;
+}
+a {
+  color: #c6391d;
+} /* links are blue by default */
+a:visited {
+  color: #935d53;
+} /* and purple after visit */
+
+/* general display */
+
+header,
+footer {
+  padding: 1em; /* 1 em = 1 text height */
+}
+header {
+  font-size: 200%;
+  height: 1em;
+}
+header > img {
+  float: left;
+  height: 1em;
+}
+header > h1 {
+  float: right;
+  font-size: 100%;
+  margin: 0;
+}
+html,
+body {
+  /* Browsers have padding by defaults, so that the text
+  does not stick to the edges. We don't need those here. */
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+#sidepannel,
+#content {
+  float: left;
+  padding: 1em;
+}
+#sidepannel {
+  width: 30%;
+}
+#content {
+  width: 65%;
+}
+#content svg {
+  width: 100%;
+  height: 600px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer > img {
+  float: right;
+}
+
+/* text styling */
+
+section p,
+section span,
+footer p,
+button,
+select {
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+footer p {
+  margin: 8px 0; /* bottom/top and left/right borders resp. */
+}
+a {
+  font-weight: bold;
+  text-decoration: none; /* by default links are underlined */
+  transition: color 0.5s;
+}
+a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+/* graph styling */
+
+#countries g circle {
+  fill-opacity: 0.5;
+}
+#countries g.selected circle,
+#countries g circle:hover {
+  fill-opacity: 1;
+}
+#countries g:not(.selected) circle:not(:hover) + text {
+  opacity: 0;
+  pointer-events: none;
+}
+#countries g text {
+  transition: opacity 1s;
+}
+
+/* controls styling */
+
+#controls {
+  line-height: 2;
+}
+.control-label {
+  float: left;
+}
+.control-unit {
+  float: right;
+}
+button,
+select {
+  font-size: 85%;
+  height: 2em;
+  color: #333333;
+  border: solid 0.5px #a3a3a3;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+}
+input {
+  height: 1em;
+}
+#y-axis-button {
+  width: 150px;
+}
+#play,
+#pause {
+  height: 2em;
+  width: 2em;
+  padding-top: 2px;
+  text-align: center;
+  border-radius: 1em;
+}
+#reinitialize {
+  width: 100%;
+}
